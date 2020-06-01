@@ -22,7 +22,8 @@ def ConvertVolts(data,places):
 
 afr_channel = 0
 
-delay = 5
+delay = 1
+times_looped = 0
 
 while True:
     #Read AFR data from channel
@@ -33,7 +34,8 @@ while True:
     print ("------------------------------")
 
     print("AFR: {} ({}V)".format(afr_level,afr_volts))
+    print(times_looped)
+    times_looped += 1
 
     #Wait before repeating loop
     time.sleep(delay)
-
